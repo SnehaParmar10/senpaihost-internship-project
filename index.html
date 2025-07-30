@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Pro [PROTOTYPE] - Sneha's SenpaiHost Internship Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+            <div class="shape shape-6"></div>
+        </div>
+        <div class="gradient-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="app-logo">
+                    <div class="logo-icon">
+                        <div class="logo-symbol">⚡</div>
+                    </div>
+                    <div class="logo-text">
+                        <h1 class="app-title">Tic Tac Toe Pro</h1>
+                        <p class="app-subtitle">Sneha's SenpaiHost Internship Project</p>
+                    </div>
+                </div>
+                
+                <!-- AI Status Indicator -->
+                <div class="ai-status-indicator">
+                    <div class="status-dot"></div>
+                    <span class="status-text">AI Ready</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Game Content -->
+        <main class="game-content">
+            <!-- Control Panel -->
+            <section class="control-panel">
+                <!-- Game Mode Selector -->
+                <div class="mode-selector">
+                    <div class="mode-header">
+                        <h3>Game Mode</h3>
+                    </div>
+                    <div class="mode-buttons">
+                        <button onclick="setGameMode('ai')" id="aiBtn" class="mode-btn active">
+                            <div class="mode-icon">🤖</div>
+                            <div class="mode-info">
+                                <span class="mode-title">vs AI</span>
+                                <span class="mode-desc">Challenge Google AI</span>
+                            </div>
+                        </button>
+                        <button onclick="setGameMode('pvp')" id="pvpBtn" class="mode-btn">
+                            <div class="mode-icon">👥</div>
+                            <div class="mode-info">
+                                <span class="mode-title">vs Player</span>
+                                <span class="mode-desc">Local multiplayer</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- AI Difficulty -->
+                <div class="difficulty-selector" id="difficultySection">
+                    <div class="difficulty-header">
+                        <h3>AI Difficulty</h3>
+                    </div>
+                    <select id="difficulty" class="difficulty-select" title="Select AI difficulty level" aria-label="AI Difficulty Level">
+                        <option value="easy">🟢 Easy - Learning</option>
+                        <option value="medium" selected>🟡 Medium - Balanced</option>
+                        <option value="hard">🔴 Hard - Expert</option>
+                    </select>
+                </div>
+
+                <!-- Sound Controls -->
+                <div class="sound-controls">
+                    <div class="sound-header">
+                        <h3>Audio</h3>
+                    </div>
+                    <div class="sound-panel">
+                        <button onclick="toggleSound()" id="soundBtn" class="sound-toggle">
+                            <div class="sound-icon">🔊</div>
+                            <span class="sound-text">Sound On</span>
+                        </button>
+                        <div class="volume-control">
+                            <div class="volume-icon">🔉</div>
+                            <input type="range" id="volumeSlider" min="0" max="100" value="70" 
+                                   onchange="setVolume(this.value)" class="volume-slider" 
+                                   title="Volume Control" aria-label="Volume Level">
+                            <div class="volume-value">70%</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Game Board Section -->
+            <section class="game-section">
+                <!-- Game Status -->
+                <div class="game-status">
+                    <div class="status-card">
+                        <div class="current-player-info">
+                            <span class="player-label">Current Turn</span>
+                            <div class="player-display">
+                                <span class="player-symbol" id="currentPlayer">X</span>
+                                <span class="player-name" id="playerName">Your Move</span>
+                            </div>
+                        </div>
+                        <div class="game-message" id="gameStatus">Ready to play!</div>
+                    </div>
+                </div>
+
+                <!-- Game Board -->
+                <div class="game-board" id="gameBoard">
+                    <div class="board-container">
+                        <div class="cell" data-index="0" onclick="makeMove(0)" tabindex="0"></div>
+                        <div class="cell" data-index="1" onclick="makeMove(1)" tabindex="0"></div>
+                        <div class="cell" data-index="2" onclick="makeMove(2)" tabindex="0"></div>
+                        <div class="cell" data-index="3" onclick="makeMove(3)" tabindex="0"></div>
+                        <div class="cell" data-index="4" onclick="makeMove(4)" tabindex="0"></div>
+                        <div class="cell" data-index="5" onclick="makeMove(5)" tabindex="0"></div>
+                        <div class="cell" data-index="6" onclick="makeMove(6)" tabindex="0"></div>
+                        <div class="cell" data-index="7" onclick="makeMove(7)" tabindex="0"></div>
+                        <div class="cell" data-index="8" onclick="makeMove(8)" tabindex="0"></div>
+                    </div>
+                </div>
+
+                <!-- Game Actions -->
+                <div class="game-actions">
+                    <button onclick="resetGame()" class="action-btn primary">
+                        <div class="btn-icon">🔄</div>
+                        <span>New Game</span>
+                    </button>
+                    <a href="internship-report.html" class="action-btn secondary">
+                        <div class="btn-icon">📊</div>
+                        <span>View Report</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Score Section -->
+            <section class="score-section">
+                <div class="score-header">
+                    <h3>Score Board</h3>
+                </div>
+                <div class="score-grid">
+                    <div class="score-card player-x">
+                        <div class="score-icon">❌</div>
+                        <div class="score-info">
+                            <span class="score-label">Player X</span>
+                            <span class="score-value" id="scoreX">0</span>
+                        </div>
+                    </div>
+                    <div class="score-card player-o">
+                        <div class="score-icon">⭕</div>
+                        <div class="score-info">
+                            <span class="score-label">Player O</span>
+                            <span class="score-value" id="scoreO">0</span>
+                        </div>
+                    </div>
+                    <div class="score-card draws">
+                        <div class="score-icon">🤝</div>
+                        <div class="score-info">
+                            <span class="score-label">Draws</span>
+                            <span class="score-value" id="scoreDraw">0</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer/Instructions -->
+        <footer class="app-footer">
+            <!-- Project Attribution -->
+            <div class="project-attribution">
+                <div class="attribution-card">
+                    <div class="attribution-header">
+                        <h3>👩‍💻 Project Information</h3>
+                    </div>
+                    <div class="attribution-content">
+                        <div class="intern-info">
+                            <div class="intern-icon">🌟</div>
+                            <div class="intern-details">
+                                <strong>Sneha</strong> - SenpaiHost Internship Project
+                                <p>2-Month Technical Internship | Modern Web Development</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Prototype & Rights Notice -->
+                        <div class="rights-notice">
+                            <div class="prototype-badge">
+                                <div class="badge-icon">🔬</div>
+                                <span class="badge-text">PROTOTYPE</span>
+                            </div>
+                            <div class="rights-info">
+                                <p class="rights-text">
+                                    <strong>© 2025 SenpaiHost</strong> - All rights reserved. 
+                                    This project prototype is the intellectual property of SenpaiHost.
+                                </p>
+                                <p class="ownership-note">
+                                    Developed during internship program under SenpaiHost supervision and ownership.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="project-features">
+                            <span class="feature-tag">AI Integration</span>
+                            <span class="feature-tag">Premium UI/UX</span>
+                            <span class="feature-tag">Responsive Design</span>
+                            <span class="feature-tag">Web Audio API</span>
+                            <span class="feature-tag prototype-tag">Prototype</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="instructions">
+                <div class="instruction-card">
+                    <h3>🎮 How to Play</h3>
+                    <div class="instruction-grid">
+                        <div class="instruction-item">
+                            <div class="instruction-icon">🤖</div>
+                            <p>AI powered by Google Gemini for intelligent gameplay</p>
+                        </div>
+                        <div class="instruction-item">
+                            <div class="instruction-icon">🎵</div>
+                            <p>Immersive sound effects enhance your gaming experience</p>
+                        </div>
+                        <div class="instruction-item">
+                            <div class="instruction-icon">⚙️</div>
+                            <p>Choose your difficulty and customize your experience</p>
+                        </div>
+                        <div class="instruction-item">
+                            <div class="instruction-icon">🎯</div>
+                            <p>Get three in a row to win the game!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+    
+    <script src="sounds.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "name": "sneha-tic-tac-toe-pro-prototype",
+  "version": "1.0.0-prototype",
+  "description": "[PROTOTYPE] Premium AI-powered Tic Tac Toe game - Sneha's SenpaiHost Internship Project. © 2025 SenpaiHost - All rights reserved.",
+  "main": "index.html",
+  "private": true,
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve . --port 3000",
+    "serve": "python -m http.server 8000"
+  },
+  "keywords": [
+    "prototype",
+    "tic-tac-toe",
+    "ai-game",
+    "google-gemini",
+    "internship-project",
+    "senpaihost",
+    "web-development",
+    "javascript",
+    "html5",
+    "css3",
+    "web-audio-api",
+    "responsive-design",
+    "accessibility"
+  ],
+  "author": "Sneha (SenpaiHost Intern)",
+  "copyright": "© 2025 SenpaiHost. All rights reserved.",
+  "license": "PROPRIETARY",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SnehaParmar10/senpaihost-internship-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SnehaParmar10/senpaihost-internship-project/issues"
+  },
+  "homepage": "https://github.com/SnehaParmar10/senpaihost-internship-project#readme"
+}
