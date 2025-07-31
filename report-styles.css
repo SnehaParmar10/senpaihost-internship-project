@@ -1178,7 +1178,7 @@ body {
 }
 
 .certificate-placeholder {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-lg);
     padding: var(--space-4);
     margin-bottom: var(--space-4);
@@ -1308,6 +1308,236 @@ body {
 .metric-info span {
     color: rgba(255, 255, 255, 0.7);
     font-size: var(--font-size-sm);
+}
+
+/* ===== PDF REFERENCE SECTION ===== */
+.pdf-reference-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-8);
+    margin-bottom: var(--space-8);
+}
+
+.pdf-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    box-shadow: 0 8px 32px var(--glass-shadow);
+    transition: all 0.3s ease;
+}
+
+.pdf-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(31, 38, 135, 0.5);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.pdf-card.main-pdf {
+    background: linear-gradient(135deg, rgba(66, 165, 245, 0.15) 0%, rgba(121, 85, 242, 0.15) 100%);
+}
+
+.pdf-card.academic-report {
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.15) 0%, rgba(233, 30, 99, 0.15) 100%);
+}
+
+.pdf-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.pdf-icon {
+    font-size: 2.5rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.pdf-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    margin: 0;
+    flex: 1;
+}
+
+.pdf-badge {
+    background: var(--gradient-primary);
+    color: white;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+}
+
+.pdf-description {
+    color: var(--color-gray-200);
+    margin-bottom: var(--space-6);
+    line-height: 1.6;
+}
+
+.pdf-features h4,
+.pdf-chapters h4 {
+    color: var(--color-white);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-4);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.pdf-feature-list,
+.chapter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-6) 0;
+}
+
+.pdf-feature-list li,
+.chapter-list li {
+    color: var(--color-gray-200);
+    margin-bottom: var(--space-2);
+    padding-left: var(--space-4);
+    position: relative;
+}
+
+.pdf-feature-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+}
+
+.chapter-list li::before {
+    content: '📄';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.pdf-actions {
+    display: flex;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+.pdf-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-lg);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: var(--font-size-base);
+}
+
+.pdf-btn.primary {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: 0 4px 15px rgba(66, 165, 245, 0.4);
+}
+
+.pdf-btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(66, 165, 245, 0.6);
+}
+
+.pdf-btn.secondary {
+    background: var(--glass-bg);
+    color: var(--color-white);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+}
+
+.pdf-btn.secondary:hover {
+    background: var(--glass-bg-strong);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.pdf-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--glass-border);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    margin-bottom: var(--space-1);
+}
+
+.stat-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-300);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pdf-info-box {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    margin-top: var(--space-8);
+}
+
+.info-header h4 {
+    color: var(--color-white);
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-6);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+}
+
+.info-item {
+    padding: var(--space-4);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-item strong {
+    color: var(--color-white);
+    display: block;
+    margin-bottom: var(--space-2);
+}
+
+.info-item p {
+    color: var(--color-gray-200);
+    margin: 0;
+    line-height: 1.5;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
