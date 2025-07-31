@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneha's SenpaiHost Internship Report - PDF Version</title>
+    <style>
+        /* ===== PDF-OPTIMIZED STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', 'Georgia', serif;
+            font-size: 12pt;
+            line-height: 1.6;
+            color: #000;
+            background: #fff;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20mm;
+        }
+
+        /* Page breaks */
+        .page-break {
+            page-break-before: always;
+        }
+
+        .no-break {
+            page-break-inside: avoid;
+        }
+
+        /* Header */
+        .report-header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+        }
+
+        .company-logo {
+            font-size: 24pt;
+            font-weight: bold;
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+
+        .report-title {
+            font-size: 18pt;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .report-subtitle {
+            font-size: 14pt;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .intern-details {
+            font-size: 12pt;
+            margin-bottom: 10px;
+        }
+
+        /* Section styles */
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 16pt;
+            font-weight: bold;
+            color: #0066cc;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        .subsection-title {
+            font-size: 14pt;
+            font-weight: bold;
+            color: #333;
+            margin: 15px 0 10px 0;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+
+        /* Boxes and highlights */
+        .info-box {
+            border: 1px solid #0066cc;
+            padding: 15px;
+            margin: 15px 0;
+            background-color: #f8f9fa;
+        }
+
+        .achievement-box {
+            border-left: 4px solid #0066cc;
+            padding-left: 15px;
+            margin: 10px 0;
+        }
+
+        /* Footer */
+        .report-footer {
+            margin-top: 40px;
+            border-top: 2px solid #333;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 10pt;
+            color: #666;
+        }
+
+        /* Print-specific styles */
+        @media print {
+            body {
+                margin: 0;
+                padding: 15mm;
+                font-size: 11pt;
+            }
+            
+            .page-break {
+                page-break-before: always;
+            }
+            
+            .no-break {
+                page-break-inside: avoid;
+            }
+            
+            a {
+                color: #000 !important;
+                text-decoration: none;
+            }
+            
+            .section-title {
+                color: #000 !important;
+            }
+            
+            .company-logo {
+                color: #000 !important;
+            }
+        }
+
+        /* Hide elements in print */
+        .no-print {
+            display: none;
+        }
+
+        @media screen {
+            .no-print {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Print Instructions (visible only on screen) -->
+    <div class="no-print" style="background: #e7f3ff; border: 1px solid #0066cc; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
+        <h3 style="color: #0066cc; margin-bottom: 10px;">📄 PDF Export Instructions</h3>
+        <p><strong>To save as PDF:</strong></p>
+        <ul style="margin: 10px 0;">
+            <li><strong>Chrome/Edge:</strong> Ctrl+P → Destination: "Save as PDF" → Save</li>
+            <li><strong>Firefox:</strong> Ctrl+P → "Print to PDF" → Save</li>
+            <li><strong>Settings:</strong> Use A4 paper size, include headers/footers</li>
+        </ul>
+        <p><strong>💡 Tip:</strong> This page is optimized for printing and PDF export!</p>
+    </div>
+
+    <!-- Report Header -->
+    <header class="report-header no-break">
+        <div class="company-logo">🏢 SenpaiHost</div>
+        <h1 class="report-title">Internship Completion Report</h1>
+        <p class="report-subtitle">2-Month Technical Internship Program</p>
+        <div class="intern-details">
+            <strong>Intern:</strong> Sneha Parmar<br>
+            <strong>Position:</strong> Web Developer Intern<br>
+            <strong>Duration:</strong> 2 June 2025 - 2 August 2025<br>
+            <strong>Department:</strong> Technology & Development Team<br>
+            <strong>Report Date:</strong> August 2025
+        </div>
+    </header>
+
+    <!-- Executive Summary -->
+    <section class="section no-break">
+        <h2 class="section-title">📋 Executive Summary</h2>
+        
+        <div class="info-box">
+            <h3 class="subsection-title">Project Overview</h3>
+            <p>Successfully completed a 2-month web developer internship at SenpaiHost, developing an AI-powered Tic Tac Toe Pro game prototype. The project demonstrates advanced front-end development skills, API integration capabilities, and modern web design principles.</p>
+        </div>
+
+        <h3 class="subsection-title">Company Information</h3>
+        <table>
+            <tr>
+                <th>Company Name</th>
+                <td>SenpaiHost</td>
+            </tr>
+            <tr>
+                <th>Industry</th>
+                <td>Technology & Web Services</td>
+            </tr>
+            <tr>
+                <th>Department</th>
+                <td>Technology & Development Team</td>
+            </tr>
+            <tr>
+                <th>Internship Duration</th>
+                <td>2 Months (2 June 2025 - 2 August 2025)</td>
+            </tr>
+            <tr>
+                <th>Work Environment</th>
+                <td>Remote/Hybrid</td>
+            </tr>
+            <tr>
+                <th>Position</th>
+                <td>Web Developer Intern</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Page Break -->
+    <div class="page-break"></div>
+
+    <!-- Work Done Section -->
+    <section class="section">
+        <h2 class="section-title">💼 Work Done & Responsibilities</h2>
+        
+        <h3 class="subsection-title">Assigned Tasks & Projects</h3>
+        <ul>
+            <li><strong>Main Project:</strong> AI-Powered Game Development - Developed a complete Tic Tac Toe game with AI integration from scratch</li>
+            <li><strong>Frontend Development:</strong> Created responsive UI using HTML5, CSS3, and modern JavaScript</li>
+            <li><strong>API Integration:</strong> Integrated Google Gemini AI API for intelligent gameplay</li>
+            <li><strong>Audio Implementation:</strong> Implemented Web Audio API for professional sound effects</li>
+            <li><strong>Testing & Documentation:</strong> Performed comprehensive testing and created detailed documentation</li>
+            <li><strong>Code Review & Optimization:</strong> Participated in code reviews and optimized performance</li>
+        </ul>
+
+        <h3 class="subsection-title">Tools & Software Used</h3>
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Tools & Technologies</th>
+            </tr>
+            <tr>
+                <td>Development Environment</td>
+                <td>Visual Studio Code, Git, Browser DevTools</td>
+            </tr>
+            <tr>
+                <td>Web Technologies</td>
+                <td>HTML5, CSS3, JavaScript ES6+, Web APIs</td>
+            </tr>
+            <tr>
+                <td>AI Integration</td>
+                <td>Google Gemini API, Fetch API, JSON handling</td>
+            </tr>
+            <tr>
+                <td>Design & UX</td>
+                <td>CSS Grid, Flexbox, Glassmorphism, Responsive Design</td>
+            </tr>
+            <tr>
+                <td>Audio & Multimedia</td>
+                <td>Web Audio API, Canvas API for animations</td>
+            </tr>
+            <tr>
+                <td>Testing & Deployment</td>
+                <td>Cross-browser testing, GitHub Pages, Local servers</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Learning & Experience Section -->
+    <section class="section">
+        <h2 class="section-title">📚 Learning & Experience</h2>
+        
+        <h3 class="subsection-title">New Skills Acquired</h3>
+        <ul>
+            <li><strong>AI API Integration:</strong> Learned to integrate and work with Google Gemini API for intelligent applications</li>
+            <li><strong>Advanced CSS Techniques:</strong> Mastered glassmorphism, advanced animations, and modern design patterns</li>
+            <li><strong>Web Audio API:</strong> Gained expertise in creating professional sound systems for web applications</li>
+            <li><strong>Responsive Design:</strong> Developed skills in creating mobile-first, accessible web interfaces</li>
+            <li><strong>Modern JavaScript:</strong> Advanced knowledge of ES6+ features, async/await, and API handling</li>
+            <li><strong>Professional Development:</strong> Learned industry-standard coding practices and documentation</li>
+        </ul>
+
+        <h3 class="subsection-title">Technical Proficiency Development</h3>
+        <div class="achievement-box">
+            <p><strong>Week 1-2:</strong> Basic web development to advanced HTML5/CSS3 techniques</p>
+        </div>
+        <div class="achievement-box">
+            <p><strong>Week 3-4:</strong> From simple styling to complex design systems and animations</p>
+        </div>
+        <div class="achievement-box">
+            <p><strong>Week 5-6:</strong> JavaScript fundamentals to advanced programming patterns</p>
+        </div>
+        <div class="achievement-box">
+            <p><strong>Week 7-8:</strong> Integration of multiple APIs and professional-grade applications</p>
+        </div>
+    </section>
+
+    <!-- Page Break -->
+    <div class="page-break"></div>
+
+    <!-- Technical Achievements -->
+    <section class="section">
+        <h2 class="section-title">🏆 Technical Achievements</h2>
+        
+        <h3 class="subsection-title">Frontend Development</h3>
+        <ul>
+            <li>Implemented proper HTML5 semantic structure with accessibility considerations</li>
+            <li>Created custom design system with CSS variables, grid, and flexbox</li>
+            <li>Utilized modern JavaScript ES6+ features including arrow functions, async/await, classes</li>
+            <li>Developed mobile-first responsive design with breakpoints and fluid layouts</li>
+        </ul>
+
+        <h3 class="subsection-title">AI Integration</h3>
+        <ul>
+            <li>Successfully integrated and configured Google Gemini API for game logic</li>
+            <li>Implemented async API communication with error handling and fallback mechanisms</li>
+            <li>Created multiple AI difficulty levels with strategic gameplay algorithms</li>
+            <li>Developed robust state management for AI interactions</li>
+        </ul>
+
+        <h3 class="subsection-title">UI/UX Design</h3>
+        <ul>
+            <li>Implemented modern glassmorphism design trends with backdrop filters</li>
+            <li>Created smooth transitions, micro-interactions, and advanced animations</li>
+            <li>Combined Apple and Material Design languages for premium user experience</li>
+            <li>Ensured WCAG compliance with keyboard navigation and screen reader support</li>
+        </ul>
+
+        <h3 class="subsection-title">Audio & Multimedia</h3>
+        <ul>
+            <li>Implemented professional Web Audio API sound system with multiple contexts</li>
+            <li>Created procedural sound effects for dynamic game interactions</li>
+            <li>Developed volume controls, mute functionality, and user preferences</li>
+            <li>Added confetti effects and dynamic visual feedback using Canvas API</li>
+        </ul>
+    </section>
+
+    <!-- Project Timeline -->
+    <section class="section">
+        <h2 class="section-title">📅 Development Timeline</h2>
+        
+        <table>
+            <tr>
+                <th>Timeline</th>
+                <th>Phase</th>
+                <th>Key Activities</th>
+                <th>Deliverables</th>
+            </tr>
+            <tr>
+                <td>2-9 June 2025</td>
+                <td>Project Setup</td>
+                <td>Project scoping, technology selection, environment setup</td>
+                <td>Project structure, Git setup, Design system</td>
+            </tr>
+            <tr>
+                <td>10-23 June 2025</td>
+                <td>UI/UX Development</td>
+                <td>Premium interface design, responsive layout, animations</td>
+                <td>Responsive design, CSS animations, Glassmorphism</td>
+            </tr>
+            <tr>
+                <td>24 June - 7 July 2025</td>
+                <td>Core Functionality</td>
+                <td>Game logic implementation, PvP mode, local AI</td>
+                <td>Game logic, State management, Local AI</td>
+            </tr>
+            <tr>
+                <td>8-21 July 2025</td>
+                <td>AI Integration</td>
+                <td>Google Gemini API integration, error handling</td>
+                <td>Google AI API, Error handling, Difficulty levels</td>
+            </tr>
+            <tr>
+                <td>22 July - 2 August 2025</td>
+                <td>Polish & Testing</td>
+                <td>Audio implementation, accessibility, testing</td>
+                <td>Web Audio API, Accessibility, Testing & QA</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Page Break -->
+    <div class="page-break"></div>
+
+    <!-- Conclusion & Feedback -->
+    <section class="section">
+        <h2 class="section-title">💭 Conclusion & Feedback</h2>
+        
+        <h3 class="subsection-title">Overall Experience</h3>
+        <p>The 2-month internship at SenpaiHost has been an incredibly enriching and transformative experience. Working on a real-world project from conception to completion provided invaluable hands-on experience in modern web development.</p>
+        
+        <div class="info-box">
+            <h4>Key Highlights:</h4>
+            <ul>
+                <li><strong>Project Completion:</strong> Successfully delivered a fully functional AI-powered web application</li>
+                <li><strong>Skill Development:</strong> Significant improvement in technical skills and professional practices</li>
+                <li><strong>Mentorship:</strong> Excellent guidance from the SenpaiHost development team</li>
+                <li><strong>Innovation:</strong> Opportunity to work with cutting-edge technologies like AI APIs</li>
+                <li><strong>Learning Curve:</strong> Continuous learning and problem-solving throughout the internship</li>
+            </ul>
+        </div>
+
+        <h3 class="subsection-title">Future Career Impact</h3>
+        <p>This internship has significantly shaped my career trajectory and future goals in web development and technology:</p>
+        <ul>
+            <li><strong>Enhanced Skill Set:</strong> Gained industry-relevant skills in modern web development and AI integration</li>
+            <li><strong>Career Direction:</strong> Confirmed interest in full-stack development with focus on AI-powered applications</li>
+            <li><strong>Industry Understanding:</strong> Better understanding of software development lifecycle and best practices</li>
+            <li><strong>Future Goals:</strong> Motivated to pursue advanced studies in web technologies and AI integration</li>
+        </ul>
+
+        <h3 class="subsection-title">Personal Reflection</h3>
+        <div class="achievement-box">
+            <p><em>"This internship exceeded my expectations in every way. The opportunity to work on a challenging project while receiving excellent mentorship from the SenpaiHost team has been invaluable. I've not only improved my technical skills but also gained confidence in tackling complex development challenges."</em></p>
+        </div>
+    </section>
+
+    <!-- Project Statistics -->
+    <section class="section no-break">
+        <h2 class="section-title">📊 Project Statistics</h2>
+        
+        <table>
+            <tr>
+                <th>Metric</th>
+                <th>Value</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Files Created</td>
+                <td>18</td>
+                <td>Complete project structure with documentation</td>
+            </tr>
+            <tr>
+                <td>Lines of Code</td>
+                <td>1,200+</td>
+                <td>HTML, CSS, JavaScript implementation</td>
+            </tr>
+            <tr>
+                <td>CSS Classes</td>
+                <td>50+</td>
+                <td>Comprehensive styling system</td>
+            </tr>
+            <tr>
+                <td>JavaScript Functions</td>
+                <td>25+</td>
+                <td>Game logic and API integration</td>
+            </tr>
+            <tr>
+                <td>AI Difficulty Levels</td>
+                <td>3</td>
+                <td>Easy, Medium, Hard gameplay modes</td>
+            </tr>
+            <tr>
+                <td>Sound Effects</td>
+                <td>8</td>
+                <td>Professional Web Audio API implementation</td>
+            </tr>
+            <tr>
+                <td>Responsive Breakpoints</td>
+                <td>4</td>
+                <td>Desktop, tablet, mobile, and small mobile</td>
+            </tr>
+            <tr>
+                <td>Accessibility Compliance</td>
+                <td>WCAG 2.1</td>
+                <td>Full keyboard navigation and screen reader support</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Footer -->
+    <footer class="report-footer">
+        <div style="margin-bottom: 20px;">
+            <strong>© 2025 SenpaiHost - All Rights Reserved</strong><br>
+            This internship report and associated project are the intellectual property of SenpaiHost.<br>
+            Developed by <strong>Sneha Parmar</strong> during her Technical Internship Program.
+        </div>
+        
+        <div style="font-size: 9pt;">
+            <strong>Project Repository:</strong> https://github.com/SnehaParmar10/senpaihost-internship-project<br>
+            <strong>Live Demo:</strong> https://snehaparmar10.github.io/senpaihost-internship-project/<br>
+            <strong>Report Generated:</strong> August 2025
+        </div>
+    </footer>
+
+    <!-- JavaScript for PDF features -->
+    <script>
+        // Add print button functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if we're in print preview
+            window.addEventListener('beforeprint', function() {
+                document.title = 'Sneha_SenpaiHost_Internship_Report_2025';
+            });
+            
+            // Add keyboard shortcut for printing
+            document.addEventListener('keydown', function(e) {
+                if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                    e.preventDefault();
+                    window.print();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
