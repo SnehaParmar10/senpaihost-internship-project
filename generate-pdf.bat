@@ -27,7 +27,33 @@ echo.
 echo 🎯 The PDF version includes:
 echo    ✅ Professional formatting for printing
 echo    ✅ Complete internship documentation
+echo    ✅ Real API-generated screenshots of live project
 echo    ✅ Optimized page breaks
 echo    ✅ Print-friendly styling
+echo    ✅ Real project screenshots
 echo.
+echo 📸 IMPORTANT - Real Screenshots:
+echo    1. Visit: https://snehaparmar10.github.io/senpaihost-internship-project/
+echo    2. Take screenshots of the actual game interface
+echo    3. Save as: project-screenshot.png and demo-screenshot.png
+echo    4. Place in project folder for automatic inclusion
+echo.
+echo 🖼️ Screenshot Guidelines:
+echo    - Use full browser window capture
+echo    - Include game board and UI elements
+echo    - Show different game states (start, playing, winner)
+echo    - Capture on desktop resolution for best quality
+echo.
+pause
+
+echo.
+echo 🚀 Opening live project for screenshot capture...
+start "" "https://snehaparmar10.github.io/senpaihost-internship-project/"
+echo.
+echo 📋 Quick Screenshot Instructions:
+echo    - Windows: Windows Key + Shift + S (Snipping Tool)
+echo    - Alt method: Print Screen key, then paste in Paint
+echo    - Save as PNG format for best quality
+echo.
+echo Press any key to continue with PDF generation...
 pause
