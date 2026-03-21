@@ -39,7 +39,8 @@ class SoundManager {
             button: { frequency: 1000, duration: 0.05, type: 'square' },
             reset: { frequency: 300, duration: 0.2, type: 'sine' },
             ai_thinking: { frequency: 600, duration: 0.1, type: 'triangle' },
-            error: { frequency: 200, duration: 0.3, type: 'sawtooth' }
+            error: { frequency: 200, duration: 0.3, type: 'sawtooth' },
+            start: { frequency: [400, 600, 800], duration: 0.3, type: 'sine' }
         };
     }
 
@@ -118,6 +119,11 @@ class SoundManager {
     playError() {
         const config = this.soundConfig.error;
         this.generateTone(config.frequency, config.duration, config.type);
+    }
+
+    playStart() {
+        const config = this.soundConfig.start;
+        this.playSequence(config.frequency, config.duration, config.type, 0.1);
     }
 
     // Control methods
