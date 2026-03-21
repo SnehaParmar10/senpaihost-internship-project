@@ -23,6 +23,7 @@ let gameActive = true;
 let apiKey = 'AIzaSyAONWBhZftSoJn4VeSO4AfnQcAEhuTloIE';
 let isApiKeySet = true;
 let scores = { X: 0, O: 0, draw: 0 };
+let gameHistory = [];
 
 // Winning combinations
 const winningCombinations = [
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         initializeGame();
         updateDisplay();
         setupConfettiCanvas();
+        loadHistory();
         
         // Initialize audio context on first user interaction
         document.addEventListener('click', function() {
@@ -50,6 +52,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Update volume display initially
         updateVolumeDisplay(70);
+
+        // Clear history listener
+        const clearBtn = document.getElementById('clearHistoryBtn');
+        if (clearBtn) clearBtn.onclick = clearHistory;
     } catch (error) {
         console.error('Error during game initialization:', error);
     }
@@ -598,6 +604,7 @@ function endGame(result) {
         }
         
         updateDisplay();
+        recordHistory(result); 
         console.log('Game ended successfully');
     } catch (error) {
         console.error('Error ending game:', error);
@@ -631,5 +638,73 @@ function resetGame() {
         console.log('Game reset successfully');
     } catch (error) {
         console.error('Error resetting game:', error);
+    }
+}
+
+// ===== HISTORY FUNCTIONS =====
+function recordHistory(result) {
+    const winner = result === 'draw' ? 'Draw' : result.winner;
+    const date = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    const mode = gameMode === 'ai' ? 'vs AI' : 'vs Player';
+    
+    const gameRecord = {
+        winner: winner,
+        time: date,
+        mode: mode
+    };
+    
+    gameHistory.unshift(gameRecord); // Add to beginning
+    if (gameHistory.length > 10) gameHistory.pop(); // Keep last 10
+    
+    saveHistory();
+    updateHistoryUI();
+}
+
+function saveHistory() {
+    try {
+        localStorage.setItem('tic-tac-toe-history', JSON.stringify(gameHistory));
+    } catch (e) {
+        console.error('Failed to save history', e);
+    }
+}
+
+function loadHistory() {
+    try {
+        const saved = localStorage.getItem('tic-tac-toe-history');
+        if (saved) {
+            gameHistory = JSON.parse(saved);
+            updateHistoryUI();
+        }
+    } catch (e) {
+        console.error('Failed to load history', e);
+    }
+}
+
+function updateHistoryUI() {
+    const historyList = document.getElementById('historyList');
+    if (!historyList) return;
+    
+    if (gameHistory.length === 0) {
+        historyList.innerHTML = '<li class="history-empty">No games played yet.</li>';
+        return;
+    }
+    
+    historyList.innerHTML = gameHistory.map(game => `
+        <li class="history-item winner-${game.winner.toLowerCase()}">
+            <div class="history-info">
+                <span class="winner-tag">${game.winner === 'Draw' ? '🤝' : (game.winner === 'X' ? '❌' : '⭕')} ${game.winner}</span>
+                <span class="mode-tag">${game.mode}</span>
+            </div>
+            <span class="time-tag">${game.time}</span>
+        </li>
+    `).join('');
+}
+
+function clearHistory() {
+    gameHistory = [];
+    localStorage.removeItem('tic-tac-toe-history');
+    updateHistoryUI();
+    if (typeof soundManager !== 'undefined' && soundManager) {
+        soundManager.playReset();
     }
 }
