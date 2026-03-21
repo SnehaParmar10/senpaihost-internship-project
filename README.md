@@ -9,8 +9,8 @@
 
 A premium, AI-powered Tic Tac Toe game prototype built as part of Sneha's 2-month technical internship at SenpaiHost. This project showcases modern web development skills including AI integration, premium UI/UX design, and professional-grade features.
 
-## ⚠️ PROTOTYPE NOTICE
-**This is a prototype project developed under SenpaiHost internship program.**
+## ⚠️ ACTIVE PROTOTYPE NOTICE
+**This is an actively maintained prototype project developed under SenpaiHost internship program.**
 
 ## 📋 Legal & Ownership Information
 
