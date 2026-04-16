@@ -12,6 +12,18 @@ A premium, AI-powered Tic Tac Toe game prototype built as part of Sneha's 2-mont
 ## ⚠️ ACTIVE PROTOTYPE NOTICE
 **This is an actively maintained prototype project developed under SenpaiHost internship program.**
 
+### 🤖 AI Model Details
+The game uses the **Google Gemini Pro** model (`gemini-pro`) for intelligent move generation. Our implementation features:
+- **Strategic Reasoning**: AI analyzes the entire 3x3 board before every move.
+- **Adaptive Difficulty**: Difficulty levels (Easy, Medium, Hard) are enforced via prompt engineering.
+- **Local Fallback**: A minimax-style algorithm ensures the game is playable offline.
+
+### 🔊 Sound System Features
+Our sound manager uses the **Web Audio API** to provide:
+- **Dynamic Gain**: Volume-adjustable game effects.
+- **Positional Feedback**: Audible cues for move placements and game outcomes.
+- **Low Latency**: Optimized for real-time player feedback.
+
 ## 📋 Legal & Ownership Information
 
 ### 🏢 **Rights & Ownership**

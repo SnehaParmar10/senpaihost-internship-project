@@ -227,7 +227,7 @@ function updateDisplay() {
     
     if (playerName) {
         if (gameMode === 'ai' && currentPlayer === 'O') {
-            playerName.textContent = 'AI Thinking...';
+            playerName.innerHTML = 'AI Thinking<span class="ai-thinking-dots"><span class="thinking-dot"></span><span class="thinking-dot"></span><span class="thinking-dot"></span></span>';
         } else {
             playerName.textContent = currentPlayer === 'X' ? 'Your Move' : 'Player O';
         }
