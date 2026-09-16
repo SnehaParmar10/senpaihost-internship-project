@@ -1,4 +1,4 @@
-# 🔬 Tic Tac Toe Pro [PROTOTYPE] - Sneha's SenpaiHost Internship Project
+..# 🔬 Tic Tac Toe Pro [PROTOTYPE] - Sneha's SenpaiHost Internship Project
 
 ![Internship Project](https://img.shields.io/badge/Project-Internship-blue)
 ![Company](https://img.shields.io/badge/Company-SenpaiHost-green)
